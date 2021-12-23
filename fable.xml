@@ -1,6 +1,112 @@
 <fable>
-	<page>
   
+	<page background="bg1.png">
+  	
+    <agent text="Bem-vindo ao meu mundo!" x="20" y="450" font-size="22" />
+    
+    <agent 
+      text="Era uma vez, um pequeno cavaleiro que recebeu uma carta de um amigo." 
+      x="20" y="400" width="300" on-touch="story2"> 
+      
+      <story2 text="Ele ficou muito muito surpreso, pois esse amigo tinha sumido a anos." on-touch="story3" />
+      <story3 text="Só que as notícias na carta não eram muito boas. O seu amigo tinha contraído uma doença mistériosa e precisava de ajuda para pegar a cura." y="370" />
+    
+    </agent>
+    
+    
+    <agent img="ground1.png" x="0" y="0" width="100" height="100" />
+    <agent img="ground2.png" x="100" y="0" width="100" height="100" />
+    <agent img="ground2.png" x="200" y="0" width="100" height="100" />
+    <agent img="ground2.png" x="300" y="0" width="100" height="100" />
+    <agent img="ground2.png" x="400" y="0" width="100" height="100" />
+    
+    <agent img="jump1.png" x="400" y="100" width="50" height="50" on-touch="_NEXT_PAGE" />
+    
+    <agent img="cavaleiro.png" x="200" y="90" width="90" height="100" />
     
   </page>
+  
+  <page background="bg2.png">
+  	
+    <agent text="Oh não! Estou no deserto" x="20" y="450" font-size="22" />
+    
+    <agent 
+      text="Acho melhor voltarmos..." 
+      x="20" y="430" width="300"> 
+    
+  	</agent>
+    
+    
+    <agent img="sand1.png" x="0" y="0" width="100" height="100" />
+    <agent img="sand2.png" x="100" y="0" width="100" height="100" />
+    <agent img="sand2.png" x="200" y="0" width="100" height="100" />
+    <agent img="sand2.png" x="300" y="0" width="100" height="100" />
+    <agent img="sand2.png" x="400" y="0" width="100" height="100" />
+    
+    <agent img="jump2.png" x="50" y="100" width="50" height="50" on-touch="_GOTO_PAGE:3" />
+    
+    <agent img="cavaleiro.png" x="200" y="90" width="90" height="100" />
+    
+  </page>
+  
+  <page background="bg1.png">
+  	
+    <agent text="Ué.. existia aquela porta? e aquela?" x="20" y="450" font-size="22" />
+    
+    <agent 
+      text="O que aconteceu?" 
+      x="20" y="400" width="300" on-touch="story2" on-trigger="warn"> 
+      
+      <story2 text="E se eu entrar em alguma porta?" on-touch="story3" />
+      <warn text="Esta porta está trancada" />
+    
+    </agent>
+    
+    
+    <agent img="rock.png" x="-70" y="100" width="200" height="200" />
+    <agent img="rock.png" x="370" y="100" width="200" height="200" />
+    
+    <agent img="door1.png" x="20" y="100" width="75" height="100" on-touch="warn" drop-zone="cut-door">
+    	<cut-door img="door3.png" on-touch="_NEXT_PAGE" />
+    </agent>
+    
+    
+    <agent img="door2.png" x="400" y="100" width="75" height="100" on-touch="door-open"> 
+    	<door-open img="door3.png" />
+    </agent>
+    
+    <agent 	img="saw.png" x="20" y="300" width="25" height="25" 
+      			on-touch="warn" draggable="true" on-drop="cut-door" 
+      			on-zone="disappear" on-trigger="disappear">
+    	
+      <disappear x="-100" />
+    
+    </agent>
+    
+    <agent img="ground2.png" x="0" y="0" width="100" height="100" />
+    <agent img="ground2.png" x="100" y="0" width="100" height="100" />
+    <agent img="ground2.png" x="200" y="0" width="100" height="100" />
+    <agent img="ground2.png" x="300" y="0" width="100" height="100" />
+    <agent img="ground2.png" x="400" y="0" width="100" height="100" />
+        
+    <agent img="cavaleiro.png" x="200" y="90" width="90" height="100" />
+    
+  </page>
+  
+  <page background="bg3.png">
+  	
+    <agent text="Cheguei no Lab!!!" x="20" y="450" font-size="22" color="white" />  
+    
+    <agent img="scafold2.png" x="0" y="0" width="100" height="100" />
+    <agent img="scafold2.png" x="100" y="0" width="100" height="100" />
+    <agent img="scafold2.png" x="200" y="0" width="100" height="100" />
+    <agent img="scafold2.png" x="300" y="0" width="100" height="100" />
+    <agent img="scafold2.png" x="400" y="0" width="100" height="100" />
+        
+    <agent img="cavaleiro.png" x="200" y="90" width="90" height="100" />
+    
+    <agent img="mbox.png" x="400" y="100" width="50" height="50" draggable="true" />
+    
+  </page>
+  
 </fable>
